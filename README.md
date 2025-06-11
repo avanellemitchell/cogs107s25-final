@@ -1,13 +1,7 @@
-# Final assignment for Cognitive Modeling (COGS 107)
+This is my final project submission for Cogs 107! For this assignment, I used Python to analyze a dataset of simulated reaction time (RT) data collected from a 2x2x2 experimental design. The variables in the experiment were trial difficulty (Easy vs Hard), stimulus type (Simple vs Complex), and signal presence. The goal was to analyze participant performance using Signal Detection Theory (SDT) and delta plots, and to compare how each of the two main manipulations, stimulus type and trial difficulty, impacted behavior.
 
-Using the code in `sdt_ddm.py1`, analyze the data in the file `data.csv`.
+I used the original functions provided in sdt_ddm.py to load the data, build an SDT model, and create delta plots. I added my own code to actually run the SDT analysis (run_sdt_analysis.py) and delta plot analysis (run_delta_plots_individually.py and run_delta_plots_population.py). I also wrote a script to compute average reaction time percentiles across all participants so that I could generate population-wide delta plots. That code is saved in mean_rt_percentiles.py, and the final population-level delta plots are saved as population_delta_plots.png.
 
-The code contains a function to read the data, a function to create a hierarchical SDT model, and a function to draw delta plots.  You will need to add code to run the analysis, and you may need to edit these functions to suit your purposes.
+The model outputs include posterior distributions for sensitivity (d′) and bias (criterion), and I verified convergence of the SDT model using Arviz summary diagnostics. I also visualized the results using bar plots with error bars to help interpret differences between conditions. Finally to summarize the combined insights, I wrote a short markdown file called combined_sdt_delta_insights.md where I explain what I found. In it I compare the SDT results and the delta plot results, and give an interpretation of what each manipulation (difficulty and stimulus type) seemed to affect.
 
-The data is choice response time data from a 2x2x2 experimental design (trial difficulty x stimulus type x signal presence).  Such data can be analyzed using Signal Detection Theory (SDT), or using a diffusion model.  Here we will do both (using delta plots for our diffusion model analysis) and compare the results.
-
-The main questions pertain to the effect of the stimulus type (Simple vs Complex) and trial difficulty (Easy vs Hard) on different aspects of the participants' performance.  You will need to adapt the SDT model to quantify the effect of the stimulus type and trial difficulty on the participants' performance.  You will need to check convergence of the SDT model, and display (either in a figure or a table) the posterior distributions of the parameters.
-
-During test time, you will be asked to interpret these results, including descriptive statistics of the data, including person-specific estimates, population-level estimates, convergence statistics, and about your general understanding of SDT and diffusion model parameters.
-
-Be prepared to re-run your code while you are answering questions.
+All the code files and output plots are stored in the final folder. You can run any of the code to reproduce my results or get a closer look at the analysis. I’ve done my best to follow the assignment instructions closely and make sure everything is clearly organized and labeled. I also used generative AI to help me throughout this assignment. Let me know if you need anything else!
