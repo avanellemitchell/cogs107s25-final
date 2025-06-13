@@ -66,3 +66,5 @@ axs[1].axhline(0, color='gray', linestyle='--')
 plt.tight_layout()
 plt.savefig("population_delta_plots.png", dpi=300)
 plt.show()
+
+#Created with the help of AI

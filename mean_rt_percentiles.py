@@ -1,3 +1,10 @@
+'''
+These plots show the average reaction time (RT) at different percentiles (10th, 30th, 50th, 70th, 90th) 
+across all participants, separated by experimental condition and response type (correct, error, overall). 
+Each line represents a condition, and shows how response speed varies across the RT distribution.
+
+'''
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
